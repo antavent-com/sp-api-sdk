@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ibus-ebay-apis:
+    image: antaventdd/ibus-ebay-apis:dev
+    container_name: ibus-ebay-apis
+    ports:
+      - "8085:80"
+      - "8086:443"
+    volumes:
+      - ./html:/var/www/html
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_enable=1

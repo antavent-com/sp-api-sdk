@@ -1,0 +1,16 @@
+version: '1'
+services:
+  pimics-dev:
+    image: antaventdd/amazone-dev
+    container_name: amazone-dev
+    ports:
+      - "8087:80"
+      - "8088:443"
+    volumes:
+      - ./html:/var/www/html
+#      - .project/fullchain.pem:/fullchain.pem
+#      - .project/privkey.pem:/privkey.pem
+#      - .project/default-ssl.conf:/etc/apache2/sites-enabled/default-ssl.conf
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_enable=1
