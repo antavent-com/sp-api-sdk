@@ -1,6 +1,6 @@
 <?php
 
-echo "Hallo, dies ist ein doofer Test";
+echo "Hallo, dies ist ein Test";
 
 use AmazonPHP\SellingPartner\Marketplace;
 use AmazonPHP\SellingPartner\Regions;
